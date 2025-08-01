@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
@@ -31,7 +31,5 @@ jobs:
         run: npm run build
        
  
-          push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/cesi-angular-nassim:v2
 
       
